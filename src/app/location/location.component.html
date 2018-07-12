@@ -1,0 +1,19 @@
+<div class="container">
+  <div>
+    <form #f="ngForm" (ngSubmit)="location(f)"  >
+      <div class="row">
+        <div class="col-md-12">
+          <select class="form-control form-control-lg"  name="location" id="location">            
+            <option value="Eldoret">Eldoret</option>
+            <option value="Busia">Busia</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 offset-md-9">
+          <button type="submit" class="btn btn-success btn-lg">Continue</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

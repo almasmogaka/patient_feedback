@@ -1,7 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+    <router-outlet></router-outlet>
 
-<h1>Survey</h1><survey [json]="json"></survey>
+    <nav>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/location">Location</a>
+        <a routerLink="/info">info</a>
+        <a routerLink="/quiz">Questions</a>
+    </nav>
+  
+</div>
 
-<h1>Survey JS Editor</h1><survey-editor [json]="json" (surveySaved)="onSurveySaved($event)"></survey-editor>
+<!--<h1>Survey JS Editor</h1><survey-editor [json]="json" (surveySaved)="onSurveySaved($event)"></survey-editor>-->
