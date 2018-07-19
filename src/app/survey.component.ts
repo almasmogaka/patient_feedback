@@ -54,126 +54,55 @@ export class SurveyComponent implements OnInit{
   // }
 
   public surveyjson ={
-    "title": "POC Patient Feedback",
-    "pages": [
+    completedHtml: "<p>Thank you for your feedback</p><br><br>\n\n<p>Please hand the tablet back to the clinic staff</p>\n<br><br><br><br><br><br><br><br><br>\n<a href='/location'>start new survey</a>",
+    pages: [
      {
-      "name": "page1",
-      "elements": [
+      name: "page1",
+      elements: [
        {
-        "type": "radiogroup",
-        "name": "Do you love Ampath?",
-        "title": "Do you love Ampath",
-        "isRequired": true,
-        "choices": [
-         "Yes",
-         "No",
-        ]
+        type: "rating",
+        name: "question1",
+        title: "How likely is it that you would recommend this clinic to a family member or friend?",
+        rateMax: 10,
+        minRateDescription: "not likely",
+        maxRateDescription: "very likely"
        }
-      ]
+      ],
+      navigationButtonsVisibility: "show"
      },
      {
-      "name": "page2",
-      "elements": [
+      name: "page2",
+      elements: [
        {
-        "type": "matrix",
-        "name": "Quality",
-        "title": "Please indicate if you agree or disagree with the following statements",
-        "isRequired": true,
-        "columns": [
-         {
-          "value": 1,
-          "text": "Strongly Disagree"
-         },
-         {
-          "value": 2,
-          "text": "Disagree"
-         },
-         {
-          "value": 3,
-          "text": "Neutral"
-         },
-         {
-          "value": 4,
-          "text": "Agree"
-         },
-         {
-          "value": 5,
-          "text": "Strongly Agree"
-         }
-        ],
-        "rows": [
-         {
-          "value": "affordable",
-          "text": "Product is affordable"
-         },
-         {
-          "value": "does what it claims",
-          "text": "Product does what it claims"
-         },
-         {
-          "value": "better then others",
-          "text": "Product is better than other products on the market"
-         },
-         {
-          "value": "easy to use",
-          "text": "Product is easy to use"
-         }
-        ]
-       }
-      ]
-     },
-     {
-      "name": "page3",
-      "elements": [
-       {
-        "type": "radiogroup",
-        "name": "price to competitors",
-        "title": "Compared to our competitors, do you feel the Product is",
-        "choices": [
-         "Less expensive",
-         "Priced about the same",
-         "More expensive",
-         "Not sure"
-        ]
-       }
-      ]
-     },
-     {
-      "name": "page4",
-      "elements": [
-       {
-        "type": "checkbox",
-        "name": "question1",
-        "title": "What do you Think",
-        "isRequired": true,
-        "choices": [
+        type: "checkbox",
+        name: "question2",
+        choices: [
          "item1",
          "item2",
          "item3"
         ]
        }
       ],
+      visibleIf: "{question1} <= 8"
      },
      {
-      "name": "page5",
-      "elements": [
+      name: "page3",
+      elements: [
        {
-        "type": "dropdown",
-        "name": "question2",
-        "title": "Choose",
-        "isRequired": true,
-        "choices": [
+        type: "checkbox",
+        name: "question3",
+        choices: [
          "item1",
          "item2",
          "item3"
         ]
        }
-      ]
+      ],
+      visibleIf: "{question1} >= 9"
      }
     ],
-    "showProgressBar": "bottom"
+    showProgressBar: "bottom"
    }
-
   
 
   ngOnInit() {    
