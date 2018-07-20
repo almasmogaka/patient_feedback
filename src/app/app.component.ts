@@ -6,6 +6,10 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
+
+  title="Clinic Title(Depends on clinic type)";
+  text="Patient Feedback Questionaire";
+
   json ={
     "title": "POC Patient Feedback",
     "pages": [

@@ -54,7 +54,7 @@ export class SurveyComponent implements OnInit{
   // }
 
   public surveyjson ={
-    completedHtml: "<p>Thank you for your feedback</p><br><br>\n\n<p>Please hand the tablet back to the clinic staff</p>\n<br><br><br><br><br><br><br><br><br>\n<a href='/location'>start new survey</a>",
+    completedHtml: "<p>Thank you for your feedback</p><br><br>\n\n<p>Please hand the tablet back to the clinic staff</p>\n<br><br><br><br><br><br>\n<a href='/location'>start new survey</a>",
     pages: [
      {
       name: "page1",

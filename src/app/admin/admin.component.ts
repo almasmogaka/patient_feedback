@@ -13,8 +13,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  onclick() {
-    this.route.navigate(['quiz']);
+  onClick() {
+    this.route.navigate(['welcome']);
   }
 
 }
