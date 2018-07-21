@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   constructor(private route: Router, private dataService: DataService) {} 
   
   onSubmit(form: NgForm) {
+    console.log('login',form.value);
     if(form.valid) {
       this.route.navigate(['location']);
     }
@@ -23,8 +24,8 @@ export class LoginComponent implements OnInit {
     }
   }
   getlogin() {
-    this.dataService.getlogin().subscribe(
-      data => this.login=data );
+    // this.dataService.getlogin().subscribe(
+    //   data => this.login=data );
       console.log(this.login);
      
   }

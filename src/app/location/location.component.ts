@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-location',
@@ -8,10 +10,14 @@ import { Router } from '@angular/router';
 })
 export class LocationComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private dataService: DataService) { }
 
-  location(f) {
-    this.route.navigate(['info']);
+  onSubmit(form: NgForm) {      
+    this.dataService.sendData(form.value).
+          subscribe(data => {
+            console.log(data);
+          });
+    //this.route.navigate(['info']);
   }
 
   ngOnInit() {

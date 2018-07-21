@@ -1,9 +1,9 @@
 <div>
   <div>
-    <form #f="ngForm" (ngSubmit)="location(f)"  >
-      <div class="row">
-        <div class="col-md-12">
-          <select class="form-control form-control-lg"  name="location" id="location">            
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="row">        
+        <div class="col-md-8">
+          <select class="form-control form-control-lg"  name="name" ngModel>            
             <option value="Eldoret">Eldoret</option>
             <option value="Busia">Busia</option>
           </select>
