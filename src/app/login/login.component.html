@@ -1,5 +1,5 @@
-<div>
-    <!-- <img src="assets/img/ampath.png" alt="logo"> -->
+<div class="container" >        
+    <img src="assets/img/ampath.png" alt="logo">
     <form #form="ngForm" (ngSubmit)="onSubmit(form)" >
         <div class="form-group row">
             <div class="col-12">
@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col-2 offset-md-9">
-                <button type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Login</button>
+                <button type="submit" class="btn btn-primary btn-lg">Login</button>
             </div>
         </div>
     </form>
