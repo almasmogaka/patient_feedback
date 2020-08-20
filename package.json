@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/platform-server": "^5.0.0",
     "@angular/router": "^5.0.0",
-    "bcrypt": "^3.0.0",
+    "bcrypt": "^5.0.0",
     "bootstrap": "^3.3.6",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
